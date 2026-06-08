@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "skills": {
+    "github": {
+      "name": "Github",
+      "zip_url": "https://api.skillhub.cn/api/v1/download?slug=github",
+      "source": "community",
+      "version": "1.0.0",
+      "installedAt": "2026-06-08T16:08:43Z"
+    },
+    "laomo-github": {
+      "name": "Github",
+      "zip_url": "https://api.skillhub.cn/api/v1/download?slug=laomo-github",
+      "source": "community",
+      "version": "2.0.0",
+      "installedAt": "2026-06-08T16:08:46Z"
+    },
+    "github-token": {
+      "name": "GitHub Token",
+      "zip_url": "https://api.skillhub.cn/api/v1/download?slug=github-token",
+      "source": "community",
+      "version": "1.0.0",
+      "installedAt": "2026-06-08T16:08:49Z"
+    }
+  }
+}
