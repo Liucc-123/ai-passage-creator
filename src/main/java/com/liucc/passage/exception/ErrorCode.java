@@ -5,7 +5,13 @@ import lombok.Getter;
 @Getter
 public enum ErrorCode {
 
-    NOT_AUTH_ERROR(40101, "未授权错误")
+    SUCCESS(20000, "请求成功"),
+
+    REQUEST_PARAMS_MUST_NOT_NULL(40000, "请求参数不能为空"),
+    PARAMS_ERROR(40001, "参数错误"),
+
+    NOT_AUTH_ERROR(40101, "未授权错误"),
+
     ;
 
 

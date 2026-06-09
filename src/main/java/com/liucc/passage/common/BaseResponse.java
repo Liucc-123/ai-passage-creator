@@ -32,4 +32,11 @@ public class BaseResponse<T> implements Serializable {
     public BaseResponse(ErrorCode errorCode) {
         this(errorCode.getCode(), null, errorCode.getMessage());
     }
+
+    /**
+     * 快速响应成功
+     */
+    public static <T> BaseResponse<T> success(T data) {
+        return new BaseResponse<>(ErrorCode.SUCCESS.getCode(), data);
+    }
 }

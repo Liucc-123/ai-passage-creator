@@ -1,4 +1,7 @@
 package com.liucc.passage.mapper;
 
-public interface UserMapper {
+import com.liucc.passage.model.entity.User;
+import com.mybatisflex.core.BaseMapper;
+
+public interface UserMapper extends BaseMapper<User> {
 }
