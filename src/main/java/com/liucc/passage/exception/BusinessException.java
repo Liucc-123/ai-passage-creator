@@ -1,5 +1,8 @@
 package com.liucc.passage.exception;
 
+import lombok.Getter;
+
+@Getter
 public class BusinessException extends RuntimeException{
 
     public final int code;

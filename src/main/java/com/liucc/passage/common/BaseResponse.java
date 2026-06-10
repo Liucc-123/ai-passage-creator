@@ -1,22 +1,29 @@
 package com.liucc.passage.common;
 
 import com.liucc.passage.exception.ErrorCode;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.io.Serializable;
 
 /**
- * 通过响应类
+ * 统一响应类
  *
- * @param <T>
+ * @param <T> 数据类型
  */
+@Schema(title = "统一响应", description = "所有接口返回的统一响应格式")
 @Data
 public class BaseResponse<T> implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
+    @Schema(description = "状态码", example = "0")
     private int code;
 
+    @Schema(description = "数据")
     private T data;
 
+    @Schema(description = "提示信息")
     private String message;
 
     public BaseResponse(int code, T data, String message) {

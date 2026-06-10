@@ -1,4 +1,4 @@
-package com.liucc.passage.model;
+package com.liucc.passage.model.vo;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;

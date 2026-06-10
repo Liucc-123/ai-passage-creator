@@ -6,8 +6,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
 @Mapper
-public interface UserMapper {
-    public static final UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
+public interface MUserMapper {
+    MUserMapper INSTANCE = Mappers.getMapper(MUserMapper.class);
 
     UserVO entity2VO(User user);
 }

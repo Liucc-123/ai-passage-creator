@@ -2,26 +2,32 @@ server:
   port: 8567
   servlet:
     context-path: /api
-
 spring:
-  session:
-    store-type: redis
-    timeout: 2592000        # 30天
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ai_passage_creator
-    username: root
-    password: '@Liu19991212'
-  data:
-    redis:
-      host: localhost
-      port: 6379
-  application:
-    name: ai-passage-creator
+  profiles:
+    active: local
+
 
 mybatis-flex:
   configuration:
-    map-underscore-to-camel-case: false  # 注意：本项目关闭了驼峰映射
+    map-underscore-to-camel-case: false
+
+# springdoc-openapi项目配置
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.liucc.passage.controller
+# Knife4j/Swagger 配置
+knife4j:
+  enable: true
+  setting:
+    language: zh-CN
 
 # Actuator 配置
 management:
